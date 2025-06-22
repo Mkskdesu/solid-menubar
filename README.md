@@ -7,6 +7,7 @@ A component library to create app-menu bars for solidjs.
 スクリーンショット / Screenshot:
 
 ![img.png](docs/img.png)
+
 ライトテーマ /Light theme :
 
 ![img.png](docs/light.png)
