@@ -6,7 +6,7 @@
     display: grid;
     grid-column: span 3;
     grid-template-columns: subgrid;
-    &:focus,&:focus-visible,&:focus-within                           {
+    &:focus-visible{
         .label{
             background-color: style.$accentColor;
         }
