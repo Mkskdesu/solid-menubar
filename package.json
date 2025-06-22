@@ -1,7 +1,7 @@
 {
     "name": "solid-menubar",
-    "version": "0.0.0",
-    "description": "{{desc_of_lib}}",
+    "version": "0.1.0",
+    "description": "A component library to create application menubar",
     "license": "MIT",
     "author": "Mkskdesu",
     "contributors": [],
@@ -46,7 +46,6 @@
         "test": "concurrently pnpm:test:*",
         "test:client": "vitest",
         "test:ssr": "pnpm run test:client --mode ssr",
-        "prepublishOnly": "pnpm build",
         "format": "prettier --ignore-path .gitignore -w \"src/**/*.{js,ts,json,css,tsx,jsx}\" \"dev/**/*.{js,ts,json,css,tsx,jsx}\"",
         "lint": "concurrently pnpm:lint:*",
         "lint:code": "eslint --ignore-path .gitignore --max-warnings 0 src/**/*.{js,ts,tsx,jsx}",
