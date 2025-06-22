@@ -1,5 +1,6 @@
 import { defineConfig } from 'tsup'
 import * as preset from 'tsup-preset-solid'
+import {postcssModules, sassPlugin} from "esbuild-sass-plugin";
 
 const preset_options: preset.PresetOptions = {
   // array or single object
@@ -28,6 +29,17 @@ export default defineConfig(config => {
   const watching = !!config.watch
 
   const parsed_options = preset.parsePresetOptions(preset_options, watching)
+    config.esbuildPlugins = [
+        sassPlugin({
+            type:"local-css",embedded:true,
+            filter: /\.module\.scss$/,
+
+        }),
+        sassPlugin({
+            type:"local-css",embedded:true,
+            filter:/\.scss$/
+        })
+    ]
 
   if (!watching && !CI) {
     const package_fields = preset.generatePackageExports(parsed_options)
