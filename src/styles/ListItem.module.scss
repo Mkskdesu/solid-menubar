@@ -1,0 +1,26 @@
+@use "./style";
+
+.listItem{
+    all: unset;
+    width: 100%;
+    padding: 2px 4px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 20px 1fr minmax(0,1fr);
+    align-items: center;
+    outline: none;
+    &:hover,&:focus{
+        background-color: style.$accentColor;
+    }
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hintLabel{
+    font-size: 0.8em;
+    color: style.$hintlabelColor;
+}

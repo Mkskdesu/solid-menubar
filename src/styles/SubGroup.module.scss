@@ -1,0 +1,28 @@
+@use "./style";
+
+.subgroup{
+    position: relative;
+    outline: none;
+    &:focus,&:focus-visible,&:focus-within                           {
+        .label{
+            background-color: style.$accentColor;
+        }
+
+    }
+}
+
+.label{
+    grid-template-columns: 20px 1fr 20px;
+
+
+    .arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.list{
+    left: 100%;
+    top: 0;
+}

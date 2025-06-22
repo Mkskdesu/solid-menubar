@@ -1,0 +1,28 @@
+@use "./style";
+
+.group{
+    position: relative;
+    outline: none;
+    &[data-active="true"]{
+        .label{
+            background-color: style.$accentColor;
+        }
+    }
+}
+
+.label{
+    padding: 0 4px;
+
+}
+
+.list{
+    position: absolute;
+    background-color: style.$listBackgroundLight;
+    min-width: 120px;
+    padding: 4px 0;
+    box-shadow: 0 0 4px 0 black;
+
+    &[data-theme="dark"]{
+        background-color: style.$listBackgroundDark;
+    }
+}
