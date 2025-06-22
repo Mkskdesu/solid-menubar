@@ -1,5 +1,4 @@
-import {Component, JSX, JSXElement} from "solid-js";
-import HTMLAttributes = JSX.HTMLAttributes;
+import {JSX, JSXElement} from "solid-js";
 
 interface ArrayElem<T> extends Array<T> {
 }
@@ -26,7 +25,7 @@ interface IBarContainerProps extends JSX.HTMLAttributes<HTMLDivElement> {
 }
 
 
-interface IBarGroupProps extends HTMLAttributes<HTMLDivElement>{
+interface IBarGroupProps extends JSX.HTMLAttributes<HTMLDivElement>{
     title?: string
     icon?: JSXElement
     children?: JSXElement
@@ -35,7 +34,7 @@ interface IBarGroupProps extends HTMLAttributes<HTMLDivElement>{
 }
 
 
-interface IBarListItemProps<T extends "normal" | "icon" | "checkbox"|"nested"> extends HTMLAttributes<HTMLButtonElement>{
+interface IBarListItemProps<T extends "normal" | "icon" | "checkbox"|"nested"> extends JSX.HTMLAttributes<HTMLButtonElement>{
     children?: string
     hintLabel?:string
     type?: T
