@@ -23,6 +23,7 @@ A component library to create app-menu bars for solidjs.
 ### インポート / import
 ```ts
 import MenuBar from "solid-menubar";
+import "solid-menubar/dist/index.css";
 ```
 
 ### コンポーネントを利用する / use components

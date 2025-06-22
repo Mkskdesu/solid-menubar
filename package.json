@@ -1,6 +1,6 @@
 {
     "name": "solid-menubar",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A component library to create application menubar",
     "license": "MIT",
     "author": "Mkskdesu",
@@ -14,7 +14,7 @@
         "url": "https://github.com/Mkskdesu/solid-menubar/issues"
     },
     "files": [
-        "dist"
+        "dist","dev"
     ],
     "private": false,
     "sideEffects": false,
