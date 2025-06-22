@@ -1,10 +1,10 @@
 import {Component, For, Show, useContext} from "solid-js";
 import {IBarGroupProps} from "../types";
 import {groupState, setGroupState} from "../states/groupState";
-
-import style from "../styles/Group.module.scss";
 import {ConfigContext} from "../context/config";
 import clsx from "clsx";
+
+import style from "../styles/Group.module.scss";
 
 export const BarGroup: Component<IBarGroupProps> = props => {
 
@@ -16,7 +16,7 @@ export const BarGroup: Component<IBarGroupProps> = props => {
         else setGroupState(props.title || "");
     }
     function handleFocus(e:FocusEvent){
-        e.preventDefault()
+        e.preventDefault();
     }
 
     function handleHover() {

@@ -24,7 +24,7 @@ export const BarContainer:Component<IBarContainerProps> = props => {
 
     function handleClick(e:MouseEvent){
         if (e.target instanceof HTMLSpanElement) return;
-        setGroupState(false)
+        setGroupState(false);
     }
 
     return (

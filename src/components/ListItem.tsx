@@ -8,7 +8,7 @@ import clsx from "clsx";
 export const BarListItem:Component<IBarListItemProps<"normal"|"checkbox"|"icon">> = props => {
 
     const config = useContext(ConfigContext);
-    const [prop,other] = splitProps(props, ["type","icon","checked"])
+    const [prop,other] = splitProps(props, ["type","icon","checked"]);
 
     return (
         <button {...other} class={clsx(config.noStyle||style.listItem)}>
