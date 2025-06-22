@@ -3,6 +3,9 @@
 .subgroup{
     position: relative;
     outline: none;
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: subgrid;
     &:focus,&:focus-visible,&:focus-within                           {
         .label{
             background-color: style.$accentColor;
@@ -12,8 +15,7 @@
 }
 
 .label{
-    grid-template-columns: 20px 1fr 20px;
-
+    //grid-template-columns: 20px 1fr 20px;
 
     .arrow{
         display: flex;

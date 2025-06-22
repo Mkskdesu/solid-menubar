@@ -17,9 +17,13 @@
 
 .list{
     position: absolute;
-    background-color: style.$listBackgroundLight;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 20px 2fr 1fr;
+    column-gap: 4px;
     min-width: 120px;
     padding: 4px 0;
+    background-color: style.$listBackgroundLight;
     box-shadow: 0 0 4px 0 black;
 
     &[data-theme="dark"]{

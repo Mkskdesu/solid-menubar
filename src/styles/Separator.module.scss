@@ -1,5 +1,14 @@
 @use "./style";
 
 .separator{
-    margin: 4px 0;
+    margin: 2px 0;
+    height: 1px;
+    grid-column: span 3;
+    border: none;
+    background-color: style.$textColorLight;
+
+    &[data-theme="dark"]{
+        background-color: style.$textColorDark;
+    }
+
 }
