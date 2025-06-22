@@ -10,6 +10,8 @@
     grid-template-columns: subgrid;
     align-items: center;
     outline: none;
+    white-space: nowrap;
+    text-wrap: nowrap;
     &:hover,&:focus{
         background-color: style.$accentColor;
     }
@@ -20,6 +22,8 @@
     align-items: center;
     justify-content: center;
 }
+
+
 
 .hintLabel{
     font-size: 0.8em;
