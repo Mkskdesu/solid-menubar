@@ -3,6 +3,10 @@
 .group{
     position: relative;
     outline: none;
+    &:not([data-active="true"]) :hover {
+        background-color: style.$accentColor;
+        filter: brightness(0.9);
+    }
     &[data-active="true"]{
         .label{
             background-color: style.$accentColor;
@@ -12,6 +16,11 @@
 
 .label{
     padding: 0 4px;
+    background-color: transparent;
+    &[data-animation-enabled="true"]{
+        transition: 0.5s style.$ease-out-expo;
+    }
+
 
 }
 
@@ -29,4 +38,9 @@
     &[data-theme="dark"]{
         background-color: style.$listBackgroundDark;
     }
+
+    &[data-animation-enabled="true"]{
+        animation: slideDown 0.5s style.$ease-out-expo forwards;
+    }
 }
+

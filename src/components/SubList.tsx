@@ -25,7 +25,9 @@ export const SubList:Component<ISubGroupProps> = props  => {
              tabIndex={0} onFocus={openSubList}
              onPointerEnter={openSubList} onPointerLeave={closeSubList}
         >
-            <div class={clsx(config.noStyle||listStyle.listItem,config.noStyle||style.label,props.labelClass)} onClick={e=>e.stopPropagation()}>
+            <div class={clsx(config.noStyle||listStyle.listItem,config.noStyle||style.label,props.labelClass)}
+                 onClick={e=>e.stopPropagation()}
+                data-animation-enabled={config.animation}>
                 {props.icon || <div></div>}
                 {props.title}
                 <Show when={config.subGroup?.showArrow!==false}>
@@ -33,7 +35,8 @@ export const SubList:Component<ISubGroupProps> = props  => {
                 </Show>
             </div>
             <Show when={showSubList()}>
-                <div class={clsx(config.noStyle||style.list,config.noStyle||groupStyle.list,props.listClass)} data-theme={config.theme}>
+                <div class={clsx(config.noStyle||style.list,config.noStyle||groupStyle.list,props.listClass)}
+                     data-theme={config.theme} data-animation-enabled={config.animation}>
                     {props.children}
                 </div>
             </Show>

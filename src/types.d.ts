@@ -10,6 +10,7 @@ type Exclusive<T extends Record<PropertyKey, unknown>, U extends Record<Property
 interface IConfig{
     noStyle?:boolean
     theme?:"dark"|"light",
+    animation?:boolean
     listItem?:{
         checkMarkOverride?:JSXElement
     }

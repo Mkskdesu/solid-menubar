@@ -27,4 +27,8 @@
 .list{
     left: 100%;
     top: 0;
+
+    &[data-animation-enabled="true"]{
+        animation: slideRight 0.5s style.$ease-out-expo forwards;
+    }
 }

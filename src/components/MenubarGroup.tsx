@@ -23,14 +23,17 @@ export const BarGroup: Component<IBarGroupProps> = props => {
         if (groupState() != false) setGroupState(props.title || "")
     }
 
-
     return (
         <div {...props} class={clsx(config.noStyle||style.group,props.class)} onClick={handleClick} tabIndex={0} onPointerEnter={handleHover}
              onFocus={handleFocus} data-active={groupState() == props.title}>
-            <span class={clsx(config.noStyle||style.label,props.labelClass)}>{props.title}</span>
+            <span class={clsx(config.noStyle||style.label,props.labelClass)}
+                  data-animation-enabled={config.animation}>
+                {props.title}
+            </span>
 
             <Show when={groupState() == props.title}>
-                <div class={clsx(config.noStyle||style.list,props.listClass)} data-theme={config.theme}>
+                <div class={clsx(config.noStyle||style.list,props.listClass)}
+                     data-theme={config.theme} data-animation-enabled={config.animation}>
                     {props.children}
                 </div>
             </Show>

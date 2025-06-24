@@ -12,6 +12,9 @@
     outline: none;
     white-space: nowrap;
     text-wrap: nowrap;
+    &[data-animation-enabled="true"]{
+        transition: 0.5s style.$ease-out-expo;
+    }
     &:hover,&:focus{
         background-color: style.$accentColor;
     }
