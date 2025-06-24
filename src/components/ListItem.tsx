@@ -11,7 +11,7 @@ export const BarListItem:Component<IBarListItemProps<"normal"|"checkbox"|"icon">
     const [prop,other] = splitProps(props, ["type","icon","checked"]);
 
     return (
-        <button {...other} class={clsx(config.noStyle||style.listItem)}>
+        <button {...other} class={clsx(config.noStyle||style.listItem,props.class)} data-animation-enabled={config.animation}>
             <div class={clsx(config.noStyle||style.icon)}>
                 <Switch>
                     <Match when={props.type=="icon"}>{props.icon}</Match>
@@ -23,7 +23,7 @@ export const BarListItem:Component<IBarListItemProps<"normal"|"checkbox"|"icon">
                         </Match>
                 </Switch>
             </div>
-            <div>
+            <div class={clsx(config.noStyle||style.content)}>
                 {props.children}
             </div>
             <Show when={props.hintLabel}>
