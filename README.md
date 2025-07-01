@@ -54,9 +54,11 @@ const YourComponent = () => {
 ```ts
 interface IConfig {
     //規定のcssを無効化します。 / Disable builtin styles.
-    noStyle?: Boolean //default:false
+    noStyle?: boolean //default:false
     //規定cssのテーマ / theme for builtin styles.
     theme?: "light" | "dark" //default: light
+    //リストアイテムのホバー及びリスト表示時のアニメーションを有効化します。
+    animation?:boolean //default: false
     listItem?: {
         //<MenuBar.ListItem type={"checkbox"}> チェックボックスのチェックマークをオーバーライドします.
         //Override checkmark icon for <MenuBar.ListItem type={"checkbox"}>
